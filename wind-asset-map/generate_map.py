@@ -367,6 +367,30 @@ data_js = f"""
 
 ui_html = """
 <style>
+    /* DARK MAP CONTROLS - MATCH THE DATA FILTER HEADER */
+    .leaflet-bar,
+    .leaflet-control-layers {
+        border:0 !important;
+        border-radius:8px !important;
+        box-shadow:0 0 15px rgba(0,0,0,0.3) !important;
+        overflow:hidden;
+    }
+    .leaflet-bar a,
+    .leaflet-control-layers,
+    .leaflet-control-layers-expanded {
+        background:#333 !important;
+        color:#fff !important;
+    }
+    .leaflet-bar a {
+        border-bottom:1px solid #4a4a4a !important;
+    }
+    .leaflet-bar a:last-child { border-bottom:0 !important; }
+    .leaflet-bar a:hover { background:#444 !important; color:#fff !important; }
+    .leaflet-bar a.leaflet-disabled { background:#292929 !important; color:#777 !important; }
+    .leaflet-control-layers label { color:#fff; }
+    .leaflet-control-layers input { accent-color:#777; }
+    .leaflet-control-layers-separator { border-top-color:#555; }
+
     /* PANEL STYLE */
     .filter-panel { 
         position:fixed; bottom:30px; right:30px; width:340px; 
